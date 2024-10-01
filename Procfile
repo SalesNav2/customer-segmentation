@@ -1,1 +1,1 @@
-web: gunicorn app:app
+worker: python customer-segment-script.py
