@@ -1,1 +1,1 @@
-app: python customer-segment-script.py
+web: python customer-segment-script.py
