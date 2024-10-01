@@ -1,1 +1,1 @@
-worker: python customer-segment-script.py
+app: python customer-segment-script.py
