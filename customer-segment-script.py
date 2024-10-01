@@ -12,8 +12,7 @@ kmeans_model = joblib.load(os.path.join(script_dir, 'customer_segment.pkl'))
 scaler = joblib.load(os.path.join(script_dir, 'scaler.pkl'))
 
 # Load the input data from a CSV file
-input_data = pd.read_csv('C:/xampp/htdocs/FYH/fyh-source-code/cms/content/input_data.csv')
-
+input_data = pd.read_csv(os.path.join(script_dir, 'input_data.csv'))
 
 # Extract only the columns relevant to customer segmentation
 segmentation_data = input_data[['customer_id', 'product_id', 'product_name', 'uom', 'qty', 'unit_price', 'total', 'modified']]
@@ -66,3 +65,4 @@ segmentation_results = rfm_metrics[['customer_id', 'recency', 'frequency', 'mone
 
 # Print the segmentation results as JSON
 print(json.dumps(segmentation_results))
+
